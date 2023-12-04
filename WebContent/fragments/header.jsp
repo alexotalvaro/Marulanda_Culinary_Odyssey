@@ -1,0 +1,1 @@
+<a href="<%=request.getContextPath()%>/"><h1>Marulanda Culinary Odyssey</h1></a>
