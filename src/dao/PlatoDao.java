@@ -14,6 +14,7 @@ public class PlatoDao {
 
 	private static Connection conexion;
 
+	//Metodo que almacena en una lista todos los platos de la base de datos
 	public static List<Plato> getPlatos() {
 		List<Plato> platos = new ArrayList<>();
 
@@ -56,6 +57,7 @@ public class PlatoDao {
 
 	}
 
+	//Metodo que devuelve un plato de la BBDD pasando como parametro un id.
 	public static Plato getPlatoById(int idPlato) {
 		Plato platoRecuperado = null;
 		try {
@@ -97,6 +99,7 @@ public class PlatoDao {
 
 	}
 
+	//Metodo que almacena en una lista todos los platos de la base de datos pasandole un String como parametro.
 	public static List<Plato> getPlatoByOrigen(String origenDelPlato) {
 		List<Plato> lista = new ArrayList<>();
 		Plato platoRecuperado = null;
@@ -139,6 +142,7 @@ public class PlatoDao {
 		return lista;
 	}
 
+	//Metodo que devuelve true o false dependiendo si se inserta el plato o no en la BBDD.
 	public static boolean insertarPlato(Plato plato) {
 		boolean insertado = false;		
 		try {
@@ -172,6 +176,7 @@ public class PlatoDao {
 		return insertado;
 	}
 	
+	//Metodo que devuelve true o false dependiendo si se ha modificado el plato correctamente.
 	public static boolean editarPlato(Plato plato) {
 		boolean insertado = false;		
 		try {
@@ -205,6 +210,7 @@ public class PlatoDao {
 		return insertado;
 	}
 	
+	//Metodo que devuelve true o false si se ha realizado la modificacion del campo baja correctamente.
 	public static boolean bajaAltaLogica(Plato plato) {
 		boolean insertado = false;		
 		try {
